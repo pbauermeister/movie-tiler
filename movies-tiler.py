@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""Movies tiler.
----
-AA
-"""
+# (C) 2022 by Pascal Bauermeister <pascal.bauermeister@gmail.com>
+
+"""Compose (as tiles) multiple movies into a new one."""
 
 import cv2
 import os.path
@@ -24,8 +23,7 @@ def parse_geometry(s):
 
 
 def parse_args():
-    doc_parts = [part.strip() for part in __doc__.split('---')]
-    parser = ArgumentParser(description=doc_parts[0], epilog=doc_parts[1])
+    parser = ArgumentParser(description=__doc__.strip())
 
     parser.add_argument('--resize', '-r', metavar='WIDTHxHEIGHT',
                         required=True,
